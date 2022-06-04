@@ -1,0 +1,72 @@
+html body {
+    height: 100vh;
+}
+
+.dropdown-menu {
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+.card {
+    max-width: 23rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#contact {
+    height: 90vh;
+}
+
+.profile {
+    width: 350px;
+    height: 190px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+.profile:hover {
+    height: 350px;
+}
+
+.imgBx {
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+}
+
+.profile:hover .imgBx {
+    width: 250px;
+    height: 250px;
+}
+
+.imgBx img {
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.profile .content .details {
+    transition: 0.5s;
+    transform: translateY(50px);
+}
+
+.profile:hover .content .details {
+    transform: translateY(0px);
+}
+
+.profile .content .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+
+.profile .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
