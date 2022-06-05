@@ -3,9 +3,7 @@ html body {
 }
 
 body {
-    background-image: url('../img/bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(45deg, #fbda61, #ff5acd);
 }
 
 .dropdown-menu {
