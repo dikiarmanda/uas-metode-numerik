@@ -53,32 +53,14 @@
     <!-- Main start -->
     <main>
         <div class="container">
-            <div class="row pt-4">
-                <div class="col-sm-5 rounded-4 text-bg-warning bg-opacity-50 p-4 mt-3">
-                    <h3 class="mb-4">Input</h3>
-                    <div class="form-floating mb-3">
-                        <input type="number" class="form-control" name="a" id="a" placeholder="a">
-                        <label for="floatingLabel">Nilai a</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="number" class="form-control" name="b" id="b" placeholder="b">
-                        <label for="floatingLabel">Nilai b</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="number" class="form-control" name="galat" id="galat" placeholder="Galat">
-                        <label for="floatingLabel">Galat</label>
-                    </div>
-                    <div class="text-center mt-4">
-                        <button type="submit" class="btn btn-primary" onclick="runProgram()"><i class="fa fa-play"></i>
-                            RUN</button>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                </div>
-                <div class="col-sm-5 rounded-4 text-bg-warning bg-opacity-50 p-4 mt-3">
+            <div class="row justify-content-center pt-4">
+                <div class="col-sm-6 rounded-4 text-bg-warning bg-opacity-50 p-4 mt-3">
                     <h3 class="mb-4">Hasil</h3>
-                    <h5>x^3 - x - 1</h5>
-                    <div class="text-bg-light bg-opacity-100 rounded-4" id="akarAkar"></div>
+                    <h5>f(x) = x^3 - 7x + 1</h5>
+                    <div class="text-center mt-4" id="tombol">
+                        <button type="submit" class="btn btn-primary" onclick="runProgram()"><i class="fa fa-play"></i> RUN</button>
+                    </div>
+                    <div class="text-bg-light bg-opacity-100 rounded-4 mt-4" id="akarAkar"></div>
                 </div>
             </div>
         </div>
@@ -101,15 +83,15 @@
 
     <script>
         function runProgram() {
-            var a = parseFloat(document.getElementById('a').value);
-            var b = parseFloat(document.getElementById('b').value);
-            var galat = parseFloat(document.getElementById('galat').value);
-            var akarAkar = document.getElementById('akarAkar');
+            var a = 2.6, b = 2.5, galat = 0;
             var c = (a + b) / 2, i = 1;
+            var akarAkar = document.getElementById('akarAkar');
             var cek = func(c);
 
+            document.getElementById('tombol').classList.add('d-none');
+
             function func(x) {
-                return x * x * x - x - 1;
+                return x * x * x - 7 * x + 1;
             }
 
             while (cek > galat) {
