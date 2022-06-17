@@ -58,7 +58,7 @@
             <div class="row justify-content-center pt-4">
                 <div class="col-sm-6 rounded-4 text-bg-warning bg-opacity-50 p-4 mt-3">
                     <h3 class="mb-4">Sistem Persamaan Non Linier menggunakan Metode Biseksi</h3>
-                    <h5>f(x) = x^3 - 7x + 1</h5>
+                    <h5>$f(x)=x^3-7x+1$</h5>
                     <div class="text-center mt-4" id="tombol">
                         <button type="submit" class="btn btn-primary" onclick="runProgram()"><i class="fa fa-play"></i> RUN</button>
                     </div>
@@ -111,9 +111,15 @@
             akarAkar.innerHTML = '<h4>Akar-akar = ' + c + '<br><br>Iterasi ke-'+i+'</h4>';
             akarAkar.classList.add('p-3');
         }
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
     </script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </body>
 
 </html>
