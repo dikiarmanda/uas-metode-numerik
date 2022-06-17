@@ -1,125 +1,190 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<!-- created by Diki Armanda -->
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Aplikasi Sistem Persamaan Non Linier">
-    <meta name="keywords" content="Metode Numerik, Bisection Method, UAS, Informatika, UMSIDA, Diki Armanda, Diki">
-    <meta name="author" content="Diki Armanda">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bisection Method | SPNL</title>
-    <link rel="shortcut icon" href="../assets/img/florin-sign.svg" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="https://kit.fontawesome.com/cfaa453dc0.js" crossorigin="anonymous"></script>
-    <style>
-        html, body {
-            height: 100vh;
-        }
-    </style>
-</head>
+    <!-- created by Diki Armanda -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="description"
+            content="Aplikasi Sistem Persamaan Non Linier"
+        />
+        <meta
+            name="keywords"
+            content="Metode Numerik, Bisection Method, UAS, Informatika, UMSIDA, Diki Armanda, Diki"
+        />
+        <meta name="author" content="Diki Armanda" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bisection Method | SPNL</title>
+        <link
+            rel="shortcut icon"
+            href="../assets/img/florin-sign.svg"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../assets/css/all.min.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <script
+            src="https://kit.fontawesome.com/cfaa453dc0.js"
+            crossorigin="anonymous"
+        ></script>
+        <style>
+            html,
+            body {
+                height: 100vh;
+            }
+        </style>
+    </head>
 
-<body>
-    <!-- Navbar start -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">Bisection Method</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Method</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="bisection.html">Bisection</a>
-                            <a class="dropdown-item" href="regulaFalsi.html">Regula Falsi</a>
+    <body>
+        <!-- Navbar start -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html"
+                    >Bisection Method</a
+                >
+                <button
+                    class="navbar-toggler d-lg-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId"
+                    aria-controls="collapsibleNavId"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="dropdownId"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                >Method</a
+                            >
+                            <div
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownId"
+                            >
+                                <a class="dropdown-item" href="bisection.html"
+                                    >Bisection</a
+                                >
+                                <a class="dropdown-item" href="regulaFalsi.html"
+                                    >Regula Falsi</a
+                                >
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar end -->
+        <!-- Main start -->
+        <main>
+            <div class="container">
+                <div class="row justify-content-center pt-4">
+                    <div
+                        class="col-sm-6 rounded-4 text-bg-warning bg-opacity-50 p-4 mt-3"
+                    >
+                        <h3 class="mb-4">
+                            Sistem Persamaan Non Linier menggunakan Metode
+                            Biseksi
+                        </h3>
+                        <h5>$f(x)=x^3-7x+1$</h5>
+                        <div class="text-center mt-4" id="tombol">
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                                onclick="runProgram()"
+                            >
+                                <i class="fa fa-play"></i> RUN
+                            </button>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar end -->
-    <!-- Main start -->
-    <main>
-        <div class="container">
-            <div class="row justify-content-center pt-4">
-                <div class="col-sm-6 rounded-4 text-bg-warning bg-opacity-50 p-4 mt-3">
-                    <h3 class="mb-4">Sistem Persamaan Non Linier menggunakan Metode Biseksi</h3>
-                    <h5>$f(x)=x^3-7x+1$</h5>
-                    <div class="text-center mt-4" id="tombol">
-                        <button type="submit" class="btn btn-primary" onclick="runProgram()"><i class="fa fa-play"></i> RUN</button>
+                        <div
+                            class="text-bg-light bg-opacity-100 rounded-4 mt-4"
+                            id="akarAkar"
+                        ></div>
                     </div>
-                    <div class="text-bg-light bg-opacity-100 rounded-4 mt-4" id="akarAkar"></div>
                 </div>
             </div>
-        </div>
-    </main>
-    <!-- Main end -->
-    <!-- Footer start -->
-    <footer class="fixed-bottom text-bg-dark">
-        <div class="container">
-            <div class="row justify-content-between p-2">
-                <div class="col-6">
-                    <p>&copy; 2022 all right reserved.</p>
-                </div>
-                <div class="col-6 text-end">
-                    <p>Build with ❤️ By Diki Armanda</p>
+        </main>
+        <!-- Main end -->
+        <!-- Footer start -->
+        <footer class="fixed-bottom text-bg-dark">
+            <div class="container">
+                <div class="row justify-content-between p-2">
+                    <div class="col-6">
+                        <p>&copy; 2022 all right reserved.</p>
+                    </div>
+                    <div class="col-6 text-end">
+                        <p>Build with ❤️ By Diki Armanda</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- Footer end -->
+        </footer>
+        <!-- Footer end -->
 
-    <script>
-        function runProgram() {
-            var a = 2.6, b = 2.5, c, i=0, cek = a-b;
-            var akarAkar = document.getElementById('akarAkar');
+        <script>
+            function runProgram() {
+                var a = 2.6,
+                    b = 2.5,
+                    c,
+                    i = 0,
+                    cek = a - b;
+                var akarAkar = document.getElementById("akarAkar");
 
-            document.getElementById('tombol').classList.add('d-none');
+                document.getElementById("tombol").classList.add("d-none");
 
-            function func(x) {
-                return x * x * x - 7 * x + 1;
-            }
-
-            while (Math.abs(cek) >= 0) {
-                c = (a + b) / 2;
-                console.log(c)
-                
-                if (func(c)==0) break;
-
-                if (func(a) * func(c) < 0) {
-                    b = c;
-                } else {
-                    a = c;
+                function func(x) {
+                    return x * x * x - 7 * x + 1;
                 }
-                cek = b - a;
-                i++;
-            }
-            akarAkar.innerHTML = '<h4>Akar-akar = ' + c + '<br><br>Iterasi ke-'+i+'</h4>';
-            akarAkar.classList.add('p-3');
-        }
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            }
-        };
-    </script>
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/jquery-3.6.0.min.js"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-</body>
 
+                while (Math.abs(cek) >= 0) {
+                    c = (a + b) / 2;
+                    console.log(c);
+
+                    if (func(c) == 0) break;
+
+                    if (func(a) * func(c) < 0) {
+                        b = c;
+                    } else {
+                        a = c;
+                    }
+                    cek = b - a;
+                    i++;
+                }
+                akarAkar.innerHTML =
+                    "<h4>Akar-akar = " +
+                    c +
+                    "<br><br>Iterasi ke-" +
+                    i +
+                    "</h4>";
+                akarAkar.classList.add("p-3");
+            }
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"],
+                        ["\\(", "\\)"],
+                    ],
+                },
+            };
+        </script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/jquery-3.6.0.min.js"></script>
+        <script
+            id="MathJax-script"
+            async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+        ></script>
+    </body>
 </html>

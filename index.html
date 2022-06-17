@@ -1,144 +1,215 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<!-- created by Diki Armanda -->
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Aplikasi Sistem Persamaan Non Linier">
-    <meta name="keywords" content="Metode Numerik, Bisection Method, UAS, Informatika, UMSIDA, Diki Armanda, Diki">
-    <meta name="author" content="Diki Armanda">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Persamaan Non Linier</title>
-    <link rel="shortcut icon" href="assets/img/florin-sign.svg" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://kit.fontawesome.com/cfaa453dc0.js" crossorigin="anonymous"></script>
-</head>
+    <!-- created by Diki Armanda -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="description"
+            content="Aplikasi Sistem Persamaan Non Linier"
+        />
+        <meta
+            name="keywords"
+            content="Metode Numerik, Bisection Method, UAS, Informatika, UMSIDA, Diki Armanda, Diki"
+        />
+        <meta name="author" content="Diki Armanda" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sistem Persamaan Non Linier</title>
+        <link
+            rel="shortcut icon"
+            href="assets/img/florin-sign.svg"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/all.min.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script
+            src="https://kit.fontawesome.com/cfaa453dc0.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
 
-<body>
-    <!-- Navbar start -->
-    <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Diki Armanda</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Method</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="pages/bisection.html">Bisection</a>
-                            <a class="dropdown-item" href="pages/regulaFalsi.html">Regula Falsi</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar end -->
-    <!-- Main start -->
-    <main>
-        <header class="bg-light">
+    <body>
+        <!-- Navbar start -->
+        <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
             <div class="container">
-                <div class="row justify-content-center p-5">
-                    <div class="col-sm-4">
-                        <h1 class="fw-semibold">Aplikasi SPNL</h1>
-                        <h6 class="fw-lighter text-secondary mb-4">Sistem Persamaan Non Linier</h6>
-                        <h5 class="fw-light">Metode Numerik</h5>
-                        <h3 class="fw-light">Informatika | UMSIDA</h3>
+                <a class="navbar-brand" href="index.html">Diki Armanda</a>
+                <button
+                    class="navbar-toggler d-lg-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId"
+                    aria-controls="collapsibleNavId"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="dropdownId"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                >Method</a
+                            >
+                            <div
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownId"
+                            >
+                                <a
+                                    class="dropdown-item"
+                                    href="pages/bisection.html"
+                                    >Bisection</a
+                                >
+                                <a
+                                    class="dropdown-item"
+                                    href="pages/regulaFalsi.html"
+                                    >Regula Falsi</a
+                                >
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contact.html"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar end -->
+        <!-- Main start -->
+        <main>
+            <header class="bg-light">
+                <div class="container">
+                    <div class="row justify-content-center p-5">
+                        <div class="col-sm-4">
+                            <h1 class="fw-semibold">Aplikasi SPNL</h1>
+                            <h6 class="fw-lighter text-secondary mb-4">
+                                Sistem Persamaan Non Linier
+                            </h6>
+                            <h5 class="fw-light">Metode Numerik</h5>
+                            <h3 class="fw-light">Informatika | UMSIDA</h3>
+                        </div>
+                        <div
+                            class="col-sm-4 d-none d-sm-block text-center align-self-center"
+                        >
+                            <i
+                                class="fa-solid fa-square-root-variable"
+                                style="font-size: 150px"
+                            ></i>
+                        </div>
                     </div>
-                    <div class="col-sm-4 d-none d-sm-block text-center align-self-center">
-                        <i class="fa-solid fa-square-root-variable" style="font-size: 150px;"></i>
+                </div>
+            </header>
+            <div class="container">
+                <div class="row justify-content-between text-center">
+                    <div class="fs-3 text-center py-5">
+                        <span class="text-bg-primary rounded-4 py-2 px-4"
+                            >Metode-metode Sistem Persamaan Non Linear</span
+                        >
+                    </div>
+                    <div class="col-sm-4 pt-3">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/1.jpg" />
+                            <div class="card-body">
+                                <a
+                                    href="pages/bisection.html"
+                                    class="btn btn-primary"
+                                    >Bisection Method</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 pt-3">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/2.jpg" />
+                            <div class="card-body">
+                                <a
+                                    href="pages/regulaFalsi.html"
+                                    class="btn btn-primary"
+                                    >Regula Falsi Method</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 pt-3">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/3.jpg" />
+                            <div class="card-body">
+                                <a
+                                    href="pages/bisection.html"
+                                    class="btn btn-primary"
+                                    >Bisection Method</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between text-center mb-5">
+                    <div class="col-sm-4 pt-3">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/4.jpg" />
+                            <div class="card-body">
+                                <a
+                                    href="pages/bisection.html"
+                                    class="btn btn-primary"
+                                    >Bisection Method</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 pt-3">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/5.jpg" />
+                            <div class="card-body">
+                                <a
+                                    href="pages/bisection.html"
+                                    class="btn btn-primary"
+                                    >Bisection Method</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 pt-3 mb-5">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/6.jpg" />
+                            <div class="card-body">
+                                <a
+                                    href="pages/bisection.html"
+                                    class="btn btn-primary"
+                                    >Bisection Method</a
+                                >
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
-        <div class="container">
-            <div class="row justify-content-between text-center">
-                <div class="fs-3 text-center py-5">
-                    <span class="text-bg-primary rounded-4 py-2 px-4">Metode-metode Sistem Persamaan Non Linear</span>
-                </div>
-                <div class="col-sm-4 pt-3">
-                    <div class="card">
-                        <img class="card-img-top" src="assets/img/1.jpg">
-                        <div class="card-body">
-                            <a href="pages/bisection.html" class="btn btn-primary">Bisection Method</a>
-                        </div>
+        </main>
+        <!-- Main end -->
+        <!-- Footer start -->
+        <footer class="fixed-bottom text-bg-dark">
+            <div class="container">
+                <div class="row justify-content-between p-2">
+                    <div class="col-6">
+                        <p>&copy; 2022 all right reserved.</p>
                     </div>
-                </div>
-                <div class="col-sm-4 pt-3">
-                    <div class="card">
-                        <img class="card-img-top" src="assets/img/2.jpg">
-                        <div class="card-body">
-                            <a href="pages/regulaFalsi.html" class="btn btn-primary">Regula Falsi Method</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 pt-3">
-                    <div class="card">
-                        <img class="card-img-top" src="assets/img/3.jpg">
-                        <div class="card-body">
-                            <a href="pages/bisection.html" class="btn btn-primary">Bisection Method</a>
-                        </div>
+                    <div class="col-6 text-end">
+                        <p>Build with ❤️ By Diki Armanda</p>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-between text-center mb-5">
-                <div class="col-sm-4 pt-3">
-                    <div class="card">
-                        <img class="card-img-top" src="assets/img/4.jpg">
-                        <div class="card-body">
-                            <a href="pages/bisection.html" class="btn btn-primary">Bisection Method</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 pt-3">
-                    <div class="card">
-                        <img class="card-img-top" src="assets/img/5.jpg">
-                        <div class="card-body">
-                            <a href="pages/bisection.html" class="btn btn-primary">Bisection Method</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 pt-3 mb-5">
-                    <div class="card">
-                        <img class="card-img-top" src="assets/img/6.jpg">
-                        <div class="card-body">
-                            <a href="pages/bisection.html" class="btn btn-primary">Bisection Method</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <!-- Main end -->
-    <!-- Footer start -->
-    <footer class="fixed-bottom text-bg-dark">
-        <div class="container">
-            <div class="row justify-content-between p-2">
-                <div class="col-6">
-                    <p>&copy; 2022 all right reserved.</p>
-                </div>
-                <div class="col-6 text-end">
-                    <p>Build with ❤️ By Diki Armanda</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer end -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-</body>
-
+        </footer>
+        <!-- Footer end -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
+    </body>
 </html>
