@@ -18,7 +18,7 @@
     <style>
         html,
         body {
-            height: 100vh;
+            min-height: 100vh;
         }
     </style>
 </head>
@@ -59,17 +59,18 @@
         <div class="container">
             <div class="row justify-content-center pt-4">
                 <div class="col-sm-6 rounded-4 text-bg-warning bg-opacity-50 p-4 mt-3">
-                    <h3 class="mb-4">
-                        Sistem Persamaan Non Linier menggunakan Metode
-                        Biseksi
-                    </h3>
+                    <h4>Sistem Persamaan Non Linier menggunakan</h4>
+                    <h4 class="mb-4">Metode Biseksi</h4>
                     <h5>$f(x)=x^3-7x+1$</h5>
+                    <h5>$X_1=2.6 ; X_2=2.5$ dengan galat $10^{-6}$</h5>
                     <div class="text-center mt-4" id="tombol">
                         <button type="submit" class="btn btn-primary" onclick="runProgram()">
                             <i class="fa fa-play"></i> RUN
                         </button>
                     </div>
-                    <div class="text-bg-light bg-opacity-100 rounded-4 mt-4" id="akarAkar"></div>
+                    <div class="text-bg-light bg-opacity-100 overflow-auto rounded-4" id="akarAkar">
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -91,42 +92,6 @@
     <!-- Footer end -->
 
     <script>
-        function runProgram() {
-            var a = 2.6,
-                b = 2.5,
-                c,
-                i = 0,
-                cek = a - b;
-            var akarAkar = document.getElementById("akarAkar");
-
-            document.getElementById("tombol").classList.add("d-none");
-
-            function func(x) {
-                return x * x * x - 7 * x + 1;
-            }
-
-            while (Math.abs(cek) >= 0) {
-                c = (a + b) / 2;
-                console.log(c);
-
-                if (func(c) == 0) break;
-
-                if (func(a) * func(c) < 0) {
-                    b = c;
-                } else {
-                    a = c;
-                }
-                cek = b - a;
-                i++;
-            }
-            akarAkar.innerHTML =
-                "<h4>Akar-akar = " +
-                c +
-                "<br><br>Iterasi ke-" +
-                i +
-                "</h4>";
-            akarAkar.classList.add("p-3");
-        }
         MathJax = {
             tex: {
                 inlineMath: [
@@ -136,6 +101,7 @@
             },
         };
     </script>
+    <script src="../assets/js/bisection.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/jquery-3.6.0.min.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
