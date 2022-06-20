@@ -40,8 +40,4 @@ function runProgram() {
         tabel.insertAdjacentHTML('beforeend','<tr><td scope="row">'+i+'</td><td>'+a.toFixed(3)+'</td><td>'+arrB[index].toFixed(3)+'</td><td>'+arrC[index].toFixed(3)+'</td><td>'+arrGalat[index].toFixed(7)+'</td></tr>');
         i++;
     })
-    console.log(arrA[0]);
-    console.log(arrB[0]);
-    console.log(arrC[0]);
-    console.log(arrGalat[0]);
 }
