@@ -26,7 +26,7 @@ function runProgram() {
         } else {
             a = c;
         }
-        cek = Math.abs(b - a);
+        cek = Math.abs(func(c));
         arrGalat.push(cek);
         i++;
     }
