@@ -14,7 +14,6 @@ function runProgram() {
 
     while (cek >= 0.000001) {
         c = (a + b) / 2;
-        
         arrA.push(a);
         arrB.push(b);
         arrC.push(c);
@@ -30,6 +29,7 @@ function runProgram() {
         arrGalat.push(cek);
         i++;
     }
+    
     akarAkar.insertAdjacentHTML('afterbegin','<h4>Akar-akar = ' + c + '<br>Iterasi ke-' + i + '</h4><br>');
     akarAkar.classList.add('p-3', 'my-5');
     akarAkar.insertAdjacentHTML('beforeend','<table class="table"><thead class="text-center"><tr><th>I</th><th>A</th><th>B</th><th>C</th><th>Galat</th></tr></thead><tbody class="text-end" id="iterasi"></tbody></table>');
