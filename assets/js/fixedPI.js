@@ -19,7 +19,7 @@ function runProgram() {
     console.log(arrGalat);
     console.log(a);
 
-    akarAkar.insertAdjacentHTML('afterbegin', '<h4>Akar-akar = ' + a + '<br>Iterasi ke-' + i + '</h4><br>');
+    akarAkar.insertAdjacentHTML('afterbegin', '<h4>Akar-akar = ' + a + '<br>Iterasi ke-' + i-1 + '</h4><br>');
     akarAkar.classList.add('p-3', 'my-5');
     akarAkar.insertAdjacentHTML('beforeend', '<table class="table"><thead class="text-center"><tr><th>I</th><th>A</th><th>Galat</th></tr></thead><tbody class="text-end" id="iterasi"></tbody></table>');
     var tabel = document.getElementById('iterasi');
