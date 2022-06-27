@@ -53,11 +53,11 @@ body {
 
 .profile .content .details {
     transition: 0.5s;
-    transform: translateY(50px);
+    transform: translateY(90px);
 }
 
 .profile:hover .content .details {
-    transform: translateY(0px);
+    transform: translateY(5px);
 }
 
 .profile .content .details h2 {
@@ -71,4 +71,12 @@ body {
     font-size: 0.75em;
     font-weight: 500;
     opacity: 0.5;
+}
+
+#ig:hover {
+    color: #ff0077 !important;
+}
+
+#github:hover {
+    color: #000000 !important;
 }
