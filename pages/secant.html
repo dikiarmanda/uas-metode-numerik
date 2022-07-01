@@ -60,18 +60,34 @@
     <main>
         <div class="container">
             <div class="row justify-content-center pt-4">
-                <div class="col-sm-6 rounded-4 text-bg-warning bg-opacity-50 p-4 mt-3">
-                    <h4>Sistem Persamaan Non Linier menggunakan</h4>
-                    <h4 class="mb-4">Metode Secant</h4>
+                <div class="col-sm-5 text-center align-self-center rounded-4 text-bg-light p-3">
+                    <h5>Sistem Persamaan Non Linier menggunakan</h5>
+                    <h4 class="fw-bold">Metode Secant</h4>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5 rounded-4 text-bg-warning bg-opacity-50 p-4 mt-3">
+                    <h6>Fungsi yang digunakan:</h6>
                     <h5>$f(x)=x^3-7x+1$</h5>
-                    <h5>$x_1=2.6; x_2=2.5$ dengan galat $10^{-6}$</h5>
                     <div class="text-center mt-4" id="tombol">
-                        <button type="submit" class="btn btn-primary" onclick="runProgram()">
-                            <i class="fa fa-play"></i> RUN
-                        </button>
+                        <div class="form-floating my-4">
+                            <input type="text" class="form-control" id="xr0" placeholder="Input Nilai Xr-1">
+                            <label for="xr0">Input Nilai Xr-1</label>
+                        </div>
+                        <div class="form-floating my-4">
+                            <input type="text" class="form-control" id="xr1" placeholder="Input Nilai Xr">
+                            <label for="xr1">Input Nilai Xr</label>
+                        </div>
+                        <div class="form-floating my-4">
+                            <input type="text" class="form-control" id="galat" placeholder="Input Nilai Galat">
+                            <label for="galat">Input Galat</label>
+                            <p class="fw-light text-start">(gunakan tanda titik untuk bilangan desimal)</p>
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="runProgram()"><i
+                                class="fa fa-play"></i> RUN</button>
                     </div>
+                </div>
+                <div class="col-sm-12 d-none rounded-4 text-bg-warning bg-opacity-50 p-4 mt-3 mb-5" id="result">
                     <div class="text-bg-light bg-opacity-100 overflow-auto rounded-4" id="akarAkar">
-                        
                     </div>
                 </div>
             </div>

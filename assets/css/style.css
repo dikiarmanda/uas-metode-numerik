@@ -9,12 +9,6 @@ body {
     transition-timing-function: ease-in;
 }
 
-.card {
-    max-width: 23rem;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
 #contact {
     height: 90vh;
 }

@@ -1,12 +1,11 @@
 function runProgram() {
-    var a = 2.5, i = 0, cek = Math.abs(func(a)), index;
-    var arrA=[], arrGalat=[];
-    var akarAkar = document.getElementById('akarAkar');
-    hiddenEl(document.getElementById('tombol'));
-
-    function hiddenEl(el) {
-        return el.classList.add('d-none');
-    }
+    var arrXr=[], arrGalat=[0];
+    var akarAkar = document.getElementById('akarAkar'),
+    xr = parseFloat(document.getElementById('xr').value),
+    Galat = parseFloat(document.getElementById('galat').value);
+    var i = 0, cek = Math.abs(0-xr), index;
+    document.getElementById('tombol').classList.add('d-none');
+    document.getElementById('result').classList.remove('d-none');
 
     function func(x) {
         return x * x * x - 7 * x + 1;
@@ -15,23 +14,27 @@ function runProgram() {
     function funcT(x) {
         return 3 * x * x - 7;
     }
-
-    while (cek >= 0.000001) {
-        arrA.push(a);
-        a = arrA[i] - (func(arrA[i])/funcT(arrA[i]));
-        cek = Math.abs(func(a));
+    
+    arrXr.push(xr);
+    
+    while (cek >= Galat) {
+        xr = arrXr[i] - (func(arrXr[i])/funcT(arrXr[i]));
+        arrXr.push(xr);
+        cek = Math.abs(xr-arrXr[i]);
         arrGalat.push(cek);
         i++;
     }
 
-    akarAkar.insertAdjacentHTML('afterbegin','<h4>Akar-akar = ' + a + '<br>Iterasi ke-' + i + '</h4><br>');
-    akarAkar.classList.add('p-3', 'my-5');
-    akarAkar.insertAdjacentHTML('beforeend','<table class="table"><thead class="text-center"><tr><th>I</th><th>A</th><th>Galat</th></tr></thead><tbody class="text-end" id="iterasi"></tbody></table>');
+    akarAkar.classList.add('p-3');
+    akarAkar.insertAdjacentHTML('afterbegin','<h4>Akar-akar = ' + xr + '<br>Iterasi ke-' + (i+1) + '</h4><br>');
+    akarAkar.insertAdjacentHTML('beforeend','<table class="table"><thead class="text-center"><tr><th>Iterasi</th><th>Xr</th><th>Galat</th></tr></thead><tbody class="text-end" id="iterasi"></tbody></table>');
     var tabel = document.getElementById('iterasi');
     i=1;
-    arrA.forEach(function (a) {
-        index = arrA.indexOf(a);
-        tabel.insertAdjacentHTML('beforeend','<tr><td scope="row">'+i+'</td><td>'+a.toFixed(7)+'</td><td>'+arrGalat[index].toFixed(8)+'</td></tr>');
+    arrXr.forEach(function (e) {
+        index = arrXr.indexOf(e);
+        tabel.insertAdjacentHTML('beforeend','<tr><td scope="row">'+i+'</td><td>'+e+'</td><td>'+arrGalat[index]+'</td></tr>');
         i++;
     })
+    console.log(arrXr);
+    console.log(arrGalat);
 }
