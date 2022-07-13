@@ -1,9 +1,11 @@
 function runProgram() {
-    var a = 2.58, b = 5.38, c=0, i=0, cek = Math.abs(b-a);
+    var a = 2.58, b = 5.38, c=0, i=0;
     var arrA=[], arrB=[], arrC=[], arrGalat=[];
     var index, 
-    max = parseFloat(document.getElementById('max').value), 
+    max = parseFloat(document.getElementById('max').value),
+    cek = parseFloat(document.getElementById('galat').value),
     akarAkar = document.getElementById('akarAkar');
+
     document.getElementById('tombol').classList.add('d-none');
     document.getElementById('result').classList.remove('d-none');
 
@@ -12,7 +14,7 @@ function runProgram() {
     }
 
     for (let z = 1; z <= max; z++) {
-        c = (func(b)*(b-a))/(func(b)-func(a));
+        c = b-(func(b)*(b-a))/(func(b)-func(a));
         arrA.push(a);
         arrB.push(b);
         arrC.push(c);
